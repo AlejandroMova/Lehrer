@@ -1,3 +1,6 @@
+
+[![Lehrer](./assets/banner.png)](https://github.com/AlejandroMova/Lehrer)
+
 # Lehrer
 
 > A Claude skill that guides you through understanding and building features in large codebases — without writing the code for you.
