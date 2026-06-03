@@ -18,7 +18,7 @@ jobs:
 
       - name: Package skill
         run: |
-          zip -r lehrer.skill SKILL.md README.md references/ assets/
+          zip -r lehrer.skill SKILL.md README.md references/ assets/ examples/
 
       - name: Create GitHub Release
         uses: softprops/action-gh-release@v2
