@@ -18,13 +18,13 @@ jobs:
 
       - name: Package skill
         run: |
-          cd ..
-          zip -r lehrer.skill lehrer/ \
-            --exclude "lehrer/.git*" \
-            --exclude "lehrer/.github*"
+          mkdir -p /tmp/lehrer
+          cp -r SKILL.md README.md references/ examples/ assets/ /tmp/lehrer/
+          cd /tmp
+          zip -r lehrer.skill lehrer/
 
       - name: Create GitHub Release
         uses: softprops/action-gh-release@v2
         with:
-          files: ../lehrer.skill
+          files: /tmp/lehrer.skill
           generate_release_notes: true
