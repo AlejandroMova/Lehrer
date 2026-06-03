@@ -1,6 +1,8 @@
 
 [![Lehrer](./assets/banner.png)](https://github.com/AlejandroMova/Lehrer)
 
+[![Download](https://img.shields.io/github/v/release/AlejandroMova/Lehrer?label=download%20lehrer.skill&style=flat-square)](https://github.com/AlejandroMova/Lehrer/releases/latest)
+
 # Lehrer
 
 > A Claude skill that guides you through understanding and building features in large codebases — without writing the code for you.
