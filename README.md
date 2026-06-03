@@ -65,7 +65,7 @@ After you implement it, Lehrer reviews what you built — checking for correctne
 ```bash
 mkdir -p ~/.claude/skills/lehrer
 curl -L https://github.com/AlejandroMova/Lehrer/releases/latest/download/lehrer.skill -o /tmp/lehrer.skill
-unzip /tmp/lehrer.skill -d ~/.claude/skills/lehrer
+unzip -o /tmp/lehrer.skill -d ~/.claude/skills/lehrer/
 ```
 
 Restart Claude Code — the skill is available immediately.
@@ -74,7 +74,7 @@ Restart Claude Code — the skill is available immediately.
 
 ```bash
 curl -L https://github.com/AlejandroMova/Lehrer/releases/latest/download/lehrer.skill -o /tmp/lehrer.skill
-unzip -o /tmp/lehrer.skill -d ~/.claude/skills/
+unzip -o /tmp/lehrer.skill -d ~/.claude/skills/lehrer/
 ```
 
 The skill reloads automatically on the next conversation — no restart needed. 
