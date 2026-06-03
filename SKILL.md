@@ -86,6 +86,39 @@ Calibrate depth to familiarity. If the user clearly knows a library already, ski
 
 ---
 
+### Vocabulary Table
+
+**Goal: give the developer a reference sheet for every non-obvious term, function, or variable that appears repeatedly in the relevant code.**
+
+This is a standalone section, always presented as a table. It is separate from Phase 2 — Phase 2 explains libraries at a conceptual level; the vocabulary table goes one level lower and catalogs the specific symbols the developer will actually encounter while reading and writing code.
+
+Populate the table by scanning the code or context the user has shared. Include:
+
+- Functions and methods that appear more than once
+- Variables or objects whose names don't reveal their purpose
+- Constants, flags, or sentinel values with non-obvious meaning
+- Any term from a library's API that a developer would need to look up the first time
+
+**Format:**
+
+| Term | Library / Origin | What it is | How it's used in this code |
+|------|-----------------|------------|---------------------------|
+| `nv_ds_frame_meta_list` | DeepStream (pyds) | Linked list of frame metadata objects inside a batch buffer | Iterated in the probe callback to access per-frame object data |
+| `operate-on-class-ids` | nvinfer config | Comma-separated list of class IDs the SGIE will run on | Set to `2` to restrict LPR inference to vehicle detections only |
+| `GLib.MainLoop` | GLib (PyGObject) | Event loop that keeps the GStreamer pipeline running | Called at the end of `main()` — blocking until pipeline stops |
+
+**Rules for the table:**
+
+- **Only terms that actually appear in the code** — don't pad with generic library docs
+- **"How it's used in this code"** must be specific to the user's codebase, not a generic definition. Generic definitions go in "What it is"; the codebase-specific context goes in the last column.
+- **If origin is the user's own code**, mark it as `[this codebase]` in the Library column
+- **Sort by frequency** — terms that appear most often go first
+- **No term limit** — if there are 30 recurring terms, list all 30. This table is meant to be comprehensive, not curated.
+
+Present this table immediately after Phase 2, before the implementation recommendations. If the user is in review mode (Phase 4), re-present an updated table reflecting terms that appeared in what they built.
+
+---
+
 ### Phase 3 — Implementation Recommendations
 
 **Goal: give the developer a concrete plan to execute — without executing it.**
