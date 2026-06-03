@@ -70,7 +70,18 @@ unzip /tmp/lehrer.skill -d ~/.claude/skills/lehrer
 
 Restart Claude Code — the skill is available immediately.
 
+### Updating
+ 
+```bash
+curl -L https://github.com/AlejandroMova/Lehrer/releases/latest/download/lehrer.skill -o /tmp/lehrer.skill
+unzip -o /tmp/lehrer.skill -d ~/.claude/skills/
+```
+ 
+The skill reloads automatically on the next conversation — no restart needed.
+ 
+
 ---
+
 
 ## Example interaction
 
