@@ -18,13 +18,10 @@ jobs:
 
       - name: Package skill
         run: |
-          mkdir -p /tmp/lehrer
-          cp -r SKILL.md README.md references/ examples/ assets/ /tmp/lehrer/
-          cd /tmp
-          zip -r lehrer.skill lehrer/
+          zip -r lehrer.skill SKILL.md README.md references/ assets/
 
       - name: Create GitHub Release
         uses: softprops/action-gh-release@v2
         with:
-          files: /tmp/lehrer.skill
+          files: lehrer.skill
           generate_release_notes: true
