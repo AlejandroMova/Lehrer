@@ -1,0 +1,32 @@
+name: Release
+
+on:
+  push:
+    tags:
+      - "v*.*.*"
+
+permissions:
+  contents: write
+
+jobs:
+  release:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+
+      - name: Package skill
+        run: |
+          zip -r lehrer.skill \
+            SKILL.md \
+            README.md \
+            references/ \
+            examples/ \
+            --exclude "*.git*"
+
+      - name: Create GitHub Release
+        uses: softprops/action-gh-release@v2
+        with:
+          files: lehrer.skill
+          generate_release_notes: true
