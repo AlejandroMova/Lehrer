@@ -225,9 +225,17 @@ Load these when relevant to the feature or system being discussed:
 
 ## Examples
 
-See the `examples/` directory for worked walkthroughs:
+**Reading the examples is mandatory — do it before writing any response.**
 
-| Folder | Domain | What it illustrates |
-|--------|--------|-------------------|
-| `examples/feature/` | Various | Full four-phase walkthroughs for new features |
-| `examples/bug/` | Various | Phase 1 + 3 bug investigation walkthroughs |
+Before responding to any feature map or orientation request, read the following files in order:
+
+1. `examples/feature/good.md` — the target output quality. Match this structure, tone, and level of detail exactly.
+2. `examples/feature/bad1.md` — output to avoid: unreadable ASCII diagrams that replace clear prose.
+3. `examples/feature/bad2.md` — output to avoid: walls of text with no spacing, unreadable tables, and phases that collapse into each other.
+
+The good example defines the standard. The bad examples define the failure modes. If your response would look more like bad1 or bad2 than good, rewrite it before sending.
+
+Key differences between good and bad:
+- Good: numbered steps with breathing room between them, inline code for specific values, a clear flow summary, and a focused Q&A section at the end
+- Bad1: ASCII sequence diagrams that are unreadable in a terminal and replace the actual explanation
+- Bad2: dense walls of text with no separation, markdown tables mid-prose that break the reading flow, and phases that blur into each other
