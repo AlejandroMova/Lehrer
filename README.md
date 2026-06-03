@@ -73,7 +73,7 @@ Restart Claude Code — the skill is available immediately.
 ### Updating
  
 ```bash
-curl -L https://github.com/AlejandroMova/Lehrer/releases/latest/download/lehrer.skill -o /tmp/lehrer.skill
+mkdir -p ~/.claude/skills/
 unzip -o /tmp/lehrer.skill -d ~/.claude/skills/
 ```
  
